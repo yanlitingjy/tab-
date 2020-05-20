@@ -144,192 +144,91 @@ export default {
     }
 }
 </script>
-<style scoped>
-/* tab区 */
-.yunxiang-tap-wrap {
-    width: 100%;
-    height: 3.1rem;
-    overflow-x: scroll;
-    overflow-y: hidden;
-}
-.yunxiang-tap-box {
-    display: flex;
-    height: 100%;
-    align-items: flex-start;
-    flex-wrap: wrap;
-}
-.yunxiang-tap-item {
-    position: relative;
-    margin: 0.2rem 0.35rem 0;
-    width: 0.8rem;
-    overflow: visible;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.yunxiang-tap-img {
-    width: 0.8rem;
-    height: 0.8rem;
-}
-.yunxiang-tap-text {
-    color: #333;
-    font-size: 0.22rem;
-    text-align: center;
-    line-height: 0.32rem;
-    margin-top: 0.08rem;
-    font-family: PingFangSC-Regular, PingFang SC;
-    white-space: nowrap; /*强制不换行*/
-}
-.tips-value {
-    color: #ffffff;
-    font-size: 0.18rem;
-    background: #ff3030;
-    width: 0.6rem;
-    height: 0.32rem;
-    line-height: 0.32rem;
-    text-align: center;
-    position: absolute;
-    top: -0.02rem;
-    left: 0.72rem;
-    border-radius: 0.12rem 0.12rem 0.12rem 0;
-}
-.time-limit-wrap {
-    position: relative;
-    width: 7.3rem;
-    height: 4.85rem;
-    margin: 0.32rem auto;
-    background: linear-gradient(
-        133deg,
-        rgba(255, 233, 216, 1) 0%,
-        rgba(250, 208, 174, 1) 18%,
-        rgba(255, 179, 114, 1) 100%
-    );
-    border-radius: 0.08rem;
-    padding-top: 0.22rem;
-}
-.brand-wrap {
-    height: 3.82rem;
-}
-.time-limit-bg {
-    position: absolute;
-    width: 100%;
-    height: 3.36rem;
-    left: 0;
-    top: 0;
-    z-index: 1;
-}
-.time-limit-box {
-    position: relative;
-    display: flex;
-    margin-top: 0.16rem;
-    z-index: 2;
-    overflow-x: scroll;
-}
-.time-limit-item {
-    width: 2.52rem;
-    margin-left: 0.1rem;
-    background-color: #fff;
-    padding-bottom: 0.12rem;
-}
-.brand-item {
-    width: 2.52rem;
-    margin-left: 0.1rem;
-    background-color: #fff;
-}
-.time-limit-img {
-    width: 2.52rem;
-    height: 2.52rem;
-}
-.brand-img {
-    width: 2.52rem;
-    height: 2.78rem;
-}
-.time-desc-box {
-    padding-left: 0.08rem;
-}
-.time-limit-name {
-    width: 100%;
-    height: 0.36rem;
-    margin-top: 0.1rem;
-    line-height: 0.36rem;
-    font-size: 0.24rem;
-    color: #333;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-.t-product-item-product-price {
-    height: 0.4rem;
-    line-height: 20px;
-    font-size: 0.28rem;
-    color: #ff7c41;
-}
-.t-product-item-bean-icon {
-    width: 0.24rem;
-    height: 0.24rem;
-    margin-right: 0.06rem;
-}
-.t-product-item-market-price {
-    height: 0.32rem;
-    line-height: 0.32rem;
-    font-size: 0.22rem;
-    color: #999;
-    text-decoration: line-through;
-}
-.time-title-box {
-    position: relative;
-    display: flex;
-    align-items: center;
-    z-index: 2;
-}
-.time-title {
-    font-size: 0.36rem;
-    font-weight: bold;
-    color: #e33f2e;
-    margin: 0 0.14rem 0 0.32rem;
-}
-.time-title-sup {
-    font-size: 0.28rem;
-    color: #e33f2e;
-}
-/* 指示器 */
+<style lang="scss">
 .yx-supply-list {
     position: relative;
     height: 3.1rem;
     overflow-x: visible;
-}
-.brand-end-place {
-    width: 0.3rem;
-    height: 0.1rem;
-    flex-shrink: 0;
-}
-.brand-indicator-p {
-    position: absolute;
-    width: 100%;
-    height: 0.04rem;
-    bottom: -0.1rem;
-    left: 0;
-    display: flex;
-    align-items: center;
-    overflow: visible;
-    z-index: 100;
-}
-
-.brand-indicator-p .brand-indicator-container {
-    width: 1rem;
-    height: 0.04rem;
-    background: #d8d8d8;
-    border-radius: 0.02rem;
-    position: relative;
-    overflow: hidden;
-    margin: auto;
-}
-
-.brand-indicator-p .brand-indicator-container .brand-indicator-cur {
-    width: 50%;
-    height: 0.04rem;
-    border-radius: 0.02rem;
-    background: #ff8455;
+    .yunxiang-tap-wrap {
+        width: 100%;
+        max-width: 414px;
+        height: 3.1rem;
+        margin:0 auto;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        .yunxiang-tap-box {
+            display: flex;
+            height: 100%;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            .yunxiang-tap-item {
+                position: relative;
+                margin: 0.2rem 0.35rem 0;
+                width: 0.8rem;
+                overflow: visible;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .tips-value {
+                    color: #ffffff;
+                    font-size: 0.18rem;
+                    background: #ff3030;
+                    width: 0.6rem;
+                    height: 0.32rem;
+                    line-height: 0.32rem;
+                    text-align: center;
+                    position: absolute;
+                    top: -0.02rem;
+                    left: 0.72rem;
+                    border-radius: 0.12rem 0.12rem 0.12rem 0;
+                }
+                .yunxiang-tap-img {
+                    width: 0.8rem;
+                    height: 0.8rem;
+                }
+                .yunxiang-tap-text {
+                    color: #333;
+                    font-size: 0.22rem;
+                    text-align: center;
+                    line-height: 0.32rem;
+                    margin-top: 0.08rem;
+                    font-family: PingFangSC-Regular, PingFang SC;
+                    white-space: nowrap; /*强制不换行*/
+                }
+            }
+        }
+        .brand-end-place {
+            width: 0.3rem;
+            height: 0.1rem;
+            flex-shrink: 0;
+        }
+    }
+    .brand-indicator-p {
+        position: absolute;
+        width: 100%;
+        height: 0.04rem;
+        bottom: -0.1rem;
+        left: 0;
+        display: flex;
+        align-items: center;
+        overflow: visible;
+        z-index: 100;
+        .brand-indicator-container {
+            width: 1rem;
+            height: 0.04rem;
+            background: #d8d8d8;
+            border-radius: 0.02rem;
+            position: relative;
+            overflow: hidden;
+            margin: auto;
+            .brand-indicator-cur {
+                width: 50%;
+                height: 0.04rem;
+                border-radius: 0.02rem;
+                background: #ff8455;
+            }
+        }
+    }
 }
 </style>
